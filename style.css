@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=PT+Serif:wght@400;700&family=Poppins:wght@400;600&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+header{
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+h1{
+    padding: 2rem;
+    text-align: center;
+    font-family: 'PT Serif', monospace;
+    font-weight: 700;
+}
+
+section{
+    padding: 2rem;
+    margin-left: 10rem;
+}
+
+section p{
+    width: 50%;
+    margin-top: .5rem;
+    font-family: 'Poppins', monospace;
+    font-weight: 400;
+}
+
+h2{
+    font-family: 'Poppins', monospace;
+    font-weight: 600;
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, auto));
+    gap: 10px;
+    justify-items: center;
+    margin: 5rem 0;
+}
+
+div{
+    display: flex;
+    max-width: 17.5rem;
+    height: 20rem;
+    font-size: .8rem;
+}
+
+div:nth-child(3n - 1){
+    margin-top: 5rem;
+}
+
+img{
+    width: 15rem;
+    height: 17.5rem;
+}
+
+figcaption{
+    margin-top: .3rem;
+    font-family: 'Poppins', monospace;
+    font-weight: 600;
+}
+
+div>p{
+    writing-mode: vertical-lr;
+    margin-left: .5rem;
+    font-family: 'PT Serif', monospace;
+    font-size: 400;
+}
+
+footer{
+    text-align: center;
+    font-family: 'Montserrat', monospace;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 600px){
+    header{
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(2, 5rem);
+        font-size: .8rem;
+    }
+    section{
+        width: fit-content;
+        margin-left: 0;
+    }
+    h1{
+        padding: 1.5rem;
+        text-align: start;
+    }
+    section p{
+        width: 100%;
+    }
+
+    main{
+        grid-template-columns: repeat(auto-fill, minmax(200px, auto));
+    }
+    
+
+    div{
+        height: fit-content;
+    }
+    
+    div:nth-child(2n - 2){
+        margin-top: 5rem;
+    }
+    
+    img{
+        width: 7.5rem;
+        height: 10.75rem;
+    }
+}
