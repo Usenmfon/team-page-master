@@ -124,3 +124,9 @@ footer{
         height: 10.75rem;
     }
 }
+
+@media only screen and (max-width: 768px){
+    main{
+        grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+    }
+}
