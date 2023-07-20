@@ -10,7 +10,6 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100vh;
 }
 
 header{
@@ -87,16 +86,16 @@ footer{
 
 @media only screen and (max-width: 600px){
     header{
-        grid-template-columns: 100%;
-        grid-template-rows: repeat(2, 5rem);
-        font-size: .8rem;
+       display: flex;
+       flex-direction: column;
     }
     section{
         width: fit-content;
         margin-left: 0;
+        padding: 1rem;
     }
     h1{
-        padding: 1.5rem;
+        padding: 1rem;
         text-align: start;
     }
     section p{
@@ -110,6 +109,10 @@ footer{
 
     div{
         height: fit-content;
+    }
+
+    div:nth-child(3n - 1){
+        margin-top: 0;
     }
     
     div:nth-child(2n - 2){
